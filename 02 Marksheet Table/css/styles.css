@@ -65,42 +65,17 @@ td {
 
 th {
   border: 2px solid #333;
-  padding: 10px;
+  padding: 30px;
   text-align: center;
   background-color: rgb(121, 3, 3);
   color: white;
 }
 
-thead {
+@media (max-width: 768px) {
+  th {
+    padding: 12px;
+  }
 }
-
-tbody {
-}
-
-/* @media (max-width: 500px) {
-
-  .table-wrapper {
-    width: 100%;
-    overflow-x: auto;
-  }
-
-  table {
-    width: 600px; 
-    border-collapse: collapse;
-  }
-} */
-
-/* @media (max-width: 500px) {
-
-  table{
-    width: 20%;
-    margin: 0px 15px;
-  
-  }
-  article {
-    gap: 5px;
-  }
-} */
 
 @media (max-width: 500px) {
   table {
@@ -137,15 +112,6 @@ tbody {
     width: 220px;
   }
 
-  /* td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 10px;
-    font-weight: bold;
-    color: darkred;
-    text-align: left;
-  } */
-
   td:last-child {
     border-bottom: none;
   }
@@ -155,12 +121,13 @@ tbody {
     font-weight: bold;
     color: rgb(121, 3, 3);
     text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     letter-spacing: 0.5px;
     text-align: left;
     position: absolute;
-    left: 10px;
-     padding: 10px 38px;
+    left: -9px;
+    top: 3px;
+    padding: 10px 48px;
   }
 
   tbody td:nth-child(1)::before {
