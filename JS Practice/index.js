@@ -1,0 +1,259 @@
+// chap 01 Alert
+
+var num = 10;
+alert(num);
+alert("Hello World!");
+
+// chap 02 Variables for Strings
+
+var name = "Basit";
+console.log(name);
+
+name = "Abdul Basit";
+console.log(name);
+
+var age;
+age = 19;
+console.log(age);
+
+var thanks = "Thanks for your input!!";
+alert(thanks);
+
+// chap 03 Variables for Numbers
+
+var weight = 50;
+console.log(weight);
+weight = 75;
+console.log(weight);
+weight = weight + 25;
+console.log(weight);
+
+var num1 = 50;
+var num2 = 25;
+var sum = num1 + num2;
+console.log(sum);
+
+var str = "23 ";
+console.log(str);
+var newStr = str + 7;
+console.log(newStr);
+
+var nums = 125;
+console.log(nums);
+var newNum = nums + 25;
+console.log(newNum);
+
+// var 1stName = "Basit" // variable name is illegal
+var name1st = "Basit"; // variable name is legal
+
+alert(150);
+alert(nums);
+
+// chap 04 Variable Names Legal and Illegal
+
+// Illegal variable name
+
+// var user name  = "abdul_basit79247"   // spaces not allowed
+// var user-name = "abdul_basit79247"    // dash, hyphen not allowed
+// var 1user = "abdul_basit79247"        // start with number not allowed
+
+// var na me;
+// var 111 = 15
+// var @ = "basit"
+// var alert = "thanks for watching"
+// var const = "fixed"
+// var flower  = "rose";
+//console.log(Flower)        // ReferenceError: Flower is not defined,     JS is caseSensitive, So, flower ≠ Flower
+//console.log(@)              // SyntaxError: Invalid or unexpected token,  This special char not allowed
+//console.log(const);        // SyntaxError: Unexpected token 'const',     JS keyword not allowed,
+//console.log(alert);         // JS keyword not allowed
+
+// legal variable name
+
+var isLoggedIn = true; // camelCase Most recommended
+var UserProfile = "Basit"; // Allowed, but specific use for classes & constructors
+var user_name = "abdul_basit79247"; // Allowed, but not recommended, This mostly happens in databases or python.
+
+var camelCase = "perfect"; // camelCase is the best variable name
+var $ = "basit";
+var _ = "basit";
+console.log(111);
+console.log($);
+console.log(_);
+
+// chap 05, Math expressions: Familiar operators
+
+var num3 = 2 + 2;
+console.log(num3);
+alert(2 + 2);
+
+var num4 = 3 * 12;
+console.log(num4);
+
+var num4 = 12 - 24;
+console.log(num4);
+
+//  modulus operator , remainder deta ha
+var num6 = 10 % 3;
+console.log(num6);
+
+//  divide operator
+var num7 = 10 / 3;
+console.log(num7);
+
+//  add operator
+var num8 = 10 + 3;
+console.log(num8);
+
+// subtract operator
+var num9 = 10 - 3;
+console.log(num9);
+
+// multiply operator
+var num10 = 10 * 3;
+console.log(num10);
+
+//  chap 06 Math expressions: Unfamiliar operators
+
+// This is a long way
+var numb = 25;
+var newNumb = numb + 1;
+console.log(numb);
+console.log(newNumb);
+
+// This is a short way
+
+// first value use then incearse it
+var num11 = 1;
+console.log(num11);
+var num18 = num11++;
+console.log(num11);
+console.log(num18);
+
+// first value use then decearse it
+var num12 = 50;
+console.log(num12);
+var num15 = num12--;
+console.log(num15);
+console.log(num12);
+
+// first value decrease then use it
+var num13 = 50;
+console.log(num13);
+var num16 = --num13;
+console.log(num13);
+console.log(num16);
+
+// first value increase then use it
+var num14 = 0;
+console.log(num14);
+var num17 = ++num14;
+console.log(num14);
+console.log(num17);
+
+//  chap 07 Math expressions: Eliminating ambiguity
+
+// old different answer
+var totalCost = 1 + 3 * 4;
+
+// new easy rule
+var num19 = 4 * 8 + 5 * 9;
+console.log(num19);
+
+var num20 = (4 * 8 * 5) / (2 * 2);
+console.log(num20);
+
+//  chap 08 Concatenating text strings
+
+var stdName = "Abdul Basit";
+alert("Thanks " + stdName + "!");
+
+var msg = "Thanks, ";
+var banger = "!";
+alert(msg + stdName + banger);
+
+var customMsg = msg + stdName + banger;
+alert(customMsg);
+
+// In Concatenating,,, If you mix strings and numbers... JS automatically converts the numbers to strings...
+alert("2 plus 2 equals " + 2 + 2);
+
+//  chap 09 Prompts
+
+var userMsg = prompt("What is your school name?", "Al-Suffa Academy");
+console.log(userMsg);
+
+var ques = "What is name of your class teacher?";
+var ans = "Abdul Basit";
+var userInp = prompt(ques, ans);
+console.log(userInp);
+
+var cats = prompt("Number of Cats ?");
+var tooManyCats = cats + 1;
+console.log(cats);
+console.log(tooManyCats);
+
+// If the user enters nothing and clicks OK, the variable is assigned an empty string: ""
+// If the user clicks Cancel, the variable is assigned a special value, null
+
+// chap 10 if statements
+
+var city = prompt("Which city of Pakistan is called the city of lights?");
+
+if (city === "Karachi" || "karachi") {
+  alert("Correct!");
+} else {
+  alert("Wrong!");
+}
+
+var score = 0;
+var userIQ;
+var question = prompt("Which city is called the heart of Pakistan?");
+
+if (question === "lahore" || question === "Lahore") {
+  score++;
+  userIQ = "Genius";
+  alert(question + " is Correct!!!");
+  console.log(score);
+} else {
+  alert(question + " is Wrong!!!");
+}
+
+// chap 11 Comparison operators
+
+// 5 === 5         true
+// 5 === "5"       false
+// 5 == "5"        true
+// true == true    true
+// true == false   false
+// true === false  false
+
+// ==  value compare, type ignore
+// === value + type compare
+
+var cityQues = prompt("Which city of Pakistan is called the city of lights?");
+
+if (cityQues !== "Karachi" && cityQues !== "karachi") {
+  alert(cityQues + " is Wrong!");
+} else {
+  alert(cityQues + " is Correct!");
+}
+
+if (1 > 0) {
+  console.log("right");
+}
+if (0 < 1) {
+  console.log("right");
+}
+if (1 >= 0) {
+  console.log("right");
+}
+if (1 >= 1) {
+  console.log("right");
+}
+if (0 <= 1) {
+  console.log("right");
+}
+if (1 <= 1) {
+  console.log("right");
+}
