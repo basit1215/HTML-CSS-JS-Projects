@@ -318,3 +318,88 @@
 
 //  chap 15 Arrays
 
+// var cities = ["Karachi", "Lahore", "Islamabad", "Peshawar", "Quetta", "Multan", "Sukkur", "Larkana"]
+
+// console.log(cities[2])
+// console.log(cities[7])
+// console.log(cities[5])
+// console.log(cities[1])
+// console.log(cities[0])
+
+// alert("Welcome to " + cities[3])
+
+// var mixedArr = [1, "Abdul Basit", "P", true]
+// console.log(mixedArr[1])
+// console.log(mixedArr[3])
+
+
+
+//  chap 16 Arrays: Adding and removing elements
+
+var pets  = []
+
+pets[0] = "dog"
+pets[2] = "cat"
+pets[3] = "bird"
+
+console.log(pets)     // (4) ['dog', empty, 'cat', 'bird']
+console.log(pets[1])  // undefined
+
+pets[1] = "lizard"
+pets[4] = "snake"
+pets[5] = "horse"
+
+console.log(pets)      // (4) ['dog', 'lizard', 'cat', 'bird', 'snake', 'horse']
+console.log(pets[1])   // lizard
+console.log(pets[4])   // snake
+console.log(pets[5])   // horse
+
+
+// Now replace array values
+console.log(pets[3])   // bird
+pets[3] = "fish"
+console.log(pets[3])   // fish
+
+//  remove the last element of an array using pop method
+pets.pop()
+console.log(pets)     
+
+// add one or more elements to the end of an array using push method
+pets.push("ferret", "elephant")
+console.log(pets)     
+
+
+
+//  chap 17 Arrays: Removing, inserting, and extracting elements
+
+// Array ke start se item remove karta hai
+console.log(pets[0])     
+pets.shift()
+console.log(pets)     
+console.log(pets[0])     
+
+// Array ke start me item add karta hai
+console.log(pets[0])   
+console.log(pets[1])  
+pets.unshift("lion", "zebra") 
+console.log(pets)     
+console.log(pets[0])   
+console.log(pets[1]) 
+
+// Beech me add bhi karta hai, delete bhi
+// array.splice(startIndex, deleteCount, addItems...)
+
+// add + delete
+console.log(pets)     
+pets.splice(3, 2, "markhor", "dolphin", "shark" )
+console.log(pets)  
+
+//  only delete
+console.log(pets)     
+pets.splice(5, 3)
+console.log(pets)     
+
+// only add
+console.log(pets)     
+pets.splice(3, 0, "goat", "duck", "bear", "monkey")
+console.log(pets)     
