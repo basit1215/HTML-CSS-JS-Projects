@@ -336,70 +336,125 @@
 
 //  chap 16 Arrays: Adding and removing elements
 
-var pets  = []
+// var pets  = []
 
-pets[0] = "dog"
-pets[2] = "cat"
-pets[3] = "bird"
+// pets[0] = "dog"
+// pets[2] = "cat"
+// pets[3] = "bird"
 
-console.log(pets)     // (4) ['dog', empty, 'cat', 'bird']
-console.log(pets[1])  // undefined
+// console.log(pets)     // (4) ['dog', empty, 'cat', 'bird']
+// console.log(pets[1])  // undefined
 
-pets[1] = "lizard"
-pets[4] = "snake"
-pets[5] = "horse"
+// pets[1] = "lizard"
+// pets[4] = "snake"
+// pets[5] = "horse"
 
-console.log(pets)      // (4) ['dog', 'lizard', 'cat', 'bird', 'snake', 'horse']
-console.log(pets[1])   // lizard
-console.log(pets[4])   // snake
-console.log(pets[5])   // horse
+// console.log(pets)      // (4) ['dog', 'lizard', 'cat', 'bird', 'snake', 'horse']
+// console.log(pets[1])   // lizard
+// console.log(pets[4])   // snake
+// console.log(pets[5])   // horse
 
 
 // Now replace array values
-console.log(pets[3])   // bird
-pets[3] = "fish"
-console.log(pets[3])   // fish
+// console.log(pets[3])   // bird
+// pets[3] = "fish"
+// console.log(pets[3])   // fish
 
 //  remove the last element of an array using pop method
-pets.pop()
-console.log(pets)     
+// pets.pop()
+// console.log(pets)     
 
 // add one or more elements to the end of an array using push method
-pets.push("ferret", "elephant")
-console.log(pets)     
+// pets.push("ferret", "elephant")
+// console.log(pets)     
 
 
 
 //  chap 17 Arrays: Removing, inserting, and extracting elements
 
-// Array ke start se item remove karta hai
-console.log(pets[0])     
-pets.shift()
-console.log(pets)     
-console.log(pets[0])     
+// Removes the first element of an array
+// console.log(pets[0])     
+// pets.shift()
+// console.log(pets)     
+// console.log(pets[0])     
 
-// Array ke start me item add karta hai
-console.log(pets[0])   
-console.log(pets[1])  
-pets.unshift("lion", "zebra") 
-console.log(pets)     
-console.log(pets[0])   
-console.log(pets[1]) 
+// Adds one or more elements to the beginning
+// console.log(pets[0])   
+// console.log(pets[1])  
+// pets.unshift("lion", "zebra") 
+// console.log(pets)     
+// console.log(pets[0])   
+// console.log(pets[1]) 
 
-// Beech me add bhi karta hai, delete bhi
+// Used to insert and/or remove elements anywhere in the array
 // array.splice(startIndex, deleteCount, addItems...)
 
 // add + delete
-console.log(pets)     
-pets.splice(3, 2, "markhor", "dolphin", "shark" )
-console.log(pets)  
+// console.log(pets)     
+// pets.splice(3, 2, "markhor", "dolphin", "shark" )
+// console.log(pets)  
 
 //  only delete
-console.log(pets)     
-pets.splice(5, 3)
-console.log(pets)     
+// console.log(pets)     
+// pets.splice(5, 3)
+// console.log(pets)     
 
 // only add
-console.log(pets)     
-pets.splice(3, 0, "goat", "duck", "bear", "monkey")
-console.log(pets)     
+// console.log(pets)     
+// pets.splice(3, 0, "goat", "duck", "bear", "monkey")
+// console.log(pets)     
+
+// Copies part of an array into a new array
+// The second number is the index AFTER the last copied element
+// Copies from index 4, Stops before index 8
+// var newPets = pets.slice(4, 8)
+// console.log(newPets)
+
+
+
+// chap 18 for loops
+
+// var checkCitySafe = prompt("Enter your city name to check safe/unsafe")
+// var safeCity = ["Lahore", "Pindi","Islamabad", "Multan"]
+
+// for(var i = 0 ; i <= 3 ; i++){
+//     if(checkCitySafe === safeCity[i]){
+//         alert(checkCitySafe + " is safe city...")
+//     }
+// }
+
+
+
+// chap 19 for loops: Flags, Booleans, array length, and loopus interruptus
+
+// Not Recommended for simple for loop condition:
+// long, complex method: for loop
+
+// var checkCitySafe = prompt("Enter your city name to check safe/unsafe")
+// var safeCity = ["Lahore", "Pindi","Islamabad", "Multan"]
+// var flag = false
+
+// for(var i = 0 ; i < safeCity.length ; i++){
+//     if(checkCitySafe === safeCity[i]){
+//         flag = true
+//         alert(checkCitySafe + " is safe city...")
+//         break
+//     }
+// }
+// if(!flag){
+//    alert(checkCitySafe + " is unsafe city...")
+// }
+
+
+
+// Recommended:
+// simple, easy, short, clean, industry level method: includes()
+
+// var checkCitySafe = prompt("Enter your city name")
+// var safeCity = ["Lahore", "Pindi", "Islamabad", "Multan"]
+
+// if (safeCity.includes(checkCitySafe)) {
+//     alert(checkCitySafe + " is safe city...")
+// } else {
+//     alert(checkCitySafe + " is unsafe city...")
+// }
