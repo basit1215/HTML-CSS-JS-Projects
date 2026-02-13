@@ -458,3 +458,18 @@
 // } else {
 //     alert(checkCitySafe + " is unsafe city...")
 // }
+
+
+
+// chap 20 for loops nested
+
+var students = ["Ali", "Basit", "Ahmed", "Furqan"]
+var courses = ["ICT", "OOP", "DLD", "DB"]
+var enrollment = []
+
+for(var i = 0; i < students.length; i++){
+    for(var j = 0; j < courses.length; i++){
+       enrollment.push(students[i] + courses[i])
+       console.log(enrollment[i])
+    }
+}
