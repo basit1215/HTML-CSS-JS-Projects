@@ -314,8 +314,6 @@
 //   e = f;
 // }
 
-
-
 //  chap 15 Arrays
 
 // var cities = ["Karachi", "Lahore", "Islamabad", "Peshawar", "Quetta", "Multan", "Sukkur", "Larkana"]
@@ -331,8 +329,6 @@
 // var mixedArr = [1, "Abdul Basit", "P", true]
 // console.log(mixedArr[1])
 // console.log(mixedArr[3])
-
-
 
 //  chap 16 Arrays: Adding and removing elements
 
@@ -354,7 +350,6 @@
 // console.log(pets[4])   // snake
 // console.log(pets[5])   // horse
 
-
 // Now replace array values
 // console.log(pets[3])   // bird
 // pets[3] = "fish"
@@ -362,55 +357,51 @@
 
 //  remove the last element of an array using pop method
 // pets.pop()
-// console.log(pets)     
+// console.log(pets)
 
 // add one or more elements to the end of an array using push method
 // pets.push("ferret", "elephant")
-// console.log(pets)     
-
-
+// console.log(pets)
 
 //  chap 17 Arrays: Removing, inserting, and extracting elements
 
 // Removes the first element of an array
-// console.log(pets[0])     
+// console.log(pets[0])
 // pets.shift()
-// console.log(pets)     
-// console.log(pets[0])     
+// console.log(pets)
+// console.log(pets[0])
 
 // Adds one or more elements to the beginning
-// console.log(pets[0])   
-// console.log(pets[1])  
-// pets.unshift("lion", "zebra") 
-// console.log(pets)     
-// console.log(pets[0])   
-// console.log(pets[1]) 
+// console.log(pets[0])
+// console.log(pets[1])
+// pets.unshift("lion", "zebra")
+// console.log(pets)
+// console.log(pets[0])
+// console.log(pets[1])
 
 // Used to insert and/or remove elements anywhere in the array
 // array.splice(startIndex, deleteCount, addItems...)
 
 // add + delete
-// console.log(pets)     
+// console.log(pets)
 // pets.splice(3, 2, "markhor", "dolphin", "shark" )
-// console.log(pets)  
+// console.log(pets)
 
 //  only delete
-// console.log(pets)     
+// console.log(pets)
 // pets.splice(5, 3)
-// console.log(pets)     
+// console.log(pets)
 
 // only add
-// console.log(pets)     
+// console.log(pets)
 // pets.splice(3, 0, "goat", "duck", "bear", "monkey")
-// console.log(pets)     
+// console.log(pets)
 
 // Copies part of an array into a new array
 // The second number is the index AFTER the last copied element
 // Copies from index 4, Stops before index 8
 // var newPets = pets.slice(4, 8)
 // console.log(newPets)
-
-
 
 // chap 18 for loops
 
@@ -422,8 +413,6 @@
 //         alert(checkCitySafe + " is safe city...")
 //     }
 // }
-
-
 
 // chap 19 for loops: Flags, Booleans, array length, and loopus interruptus
 
@@ -445,8 +434,6 @@
 //    alert(checkCitySafe + " is unsafe city...")
 // }
 
-
-
 // Recommended:
 // simple, easy, short, clean, industry level method: includes()
 
@@ -459,17 +446,156 @@
 //     alert(checkCitySafe + " is unsafe city...")
 // }
 
-
-
 // chap 20 for loops nested
 
-var students = ["Ali", "Basit", "Ahmed", "Furqan"]
-var courses = ["ICT", "OOP", "DLD", "DB"]
-var enrollment = []
+// 1st method
+// var students = ["Ali", "Basit", "Ahmed", "Furqan"]
+// var courses = ["ICT", "OOP", "DLD", "DB"]
+// var enrollment = []
 
-for(var i = 0; i < students.length; i++){
-    for(var j = 0; j < courses.length; i++){
-       enrollment.push(students[i] + courses[i])
-       console.log(enrollment[i])
-    }
-}
+// for(var i = 0; i < students.length; i++){
+//     for(var j = 0; j < courses.length; j++){
+//        enrollment.push(students[i] + " enrolled in " + courses[j])
+//     }
+// }
+// console.log(enrollment)
+
+// 2nd method
+// var students = ["Ali", "Basit", "Ahmed", "Furqan"]
+// var courses = ["ICT", "OOP", "DLD", "DB"]
+// var enrollment = []
+
+// for(var i = 0; i < students.length; i++){
+//     for(var j = 0; j < courses.length; j++){
+//         var record = students[i] + " enrolled in " + courses[j]
+//         enrollment.push(record)
+//     }
+// }
+// console.log(enrollment)
+
+// chap 21 Changing case
+
+// var userCity = prompt("Enter your city to check safe/unsafe").toLowerCase()
+// var safeCity = ["lahore", "pindi", "peshawar", "multan", "sukkur"]
+// var flag = false
+
+// for(var i = 0; i < safeCity.length; i++){
+//     if(userCity === safeCity[i]){
+//         flag = true
+//         alert(userCity + " is safe city!")
+//         break
+//     }
+// }
+// if(!flag){
+//     alert(userCity + " is unsafe city!")
+// }
+
+// var userName = prompt("Enter you name:")
+
+// userName = userName.toLowerCase()
+// console.log(userName)
+// console.log(userName.toUpperCase())
+// console.log(userName.toLowerCase())
+
+// chap 22 Strings: Measuring length and extracting parts
+
+// extracting parts
+// var userArea = prompt("Enter your area:") //kArAcHi
+
+// var firstChar = userArea.slice(0,1)
+// var otherChar = userArea.slice(1)
+
+// firstChar = firstChar.toUpperCase() // K
+// otherChar = otherChar.toLowerCase() // arachi
+
+// var finalUserCity = firstChar + otherChar
+// console.log(finalUserCity) // Karachi
+// console.log(firstChar)     // K
+// console.log(otherChar)     // arachi
+// console.log(userArea)      // kArAcHi
+
+// for string length
+// console.log(userArea.length)
+
+// var months = [
+//   "January",
+//   "Feburary",
+//   "March",
+//   "April",
+//   "May",
+//   "June",
+//   "July",
+//   "August",
+//   "September",
+//   "October",
+//   "November",
+//   "December",
+// ];
+// var monthsAbbrev = [];
+
+// for (var i = 0; i < months.length; i++) {
+//   monthsAbbrev.push(months[i].slice(0, 3));
+// }
+// console.log(monthsAbbrev); // ["jan", "feb", "mar",.....]
+
+
+// method 1 (no else only if condition, )
+// var checkDoubleSpace = prompt("Enter some text:")
+
+// for (var i = 0 ; i < checkDoubleSpace.length; i++){
+//     if (checkDoubleSpace.slice(i, i+2) === "  " ){
+//         alert("Double space found!")
+//         break
+//     }
+// }
+
+// method 2 (recommended)
+// var doubleSpaceChecker = prompt("Enter some text:")
+// var hasDoubleSpace  = false
+
+// for (var i = 0 ; i < doubleSpaceChecker.length; i++){
+//     if(doubleSpaceChecker[i] === " " && doubleSpaceChecker[i + 1] === " "){
+//         hasDoubleSpace = true
+//         break
+//     }
+// }
+// if(hasDoubleSpace){
+//     alert("Double space found!")
+// }
+// else{
+//     alert("Double space not found!")
+// }
+
+
+
+// chap 23 Strings: Finding segments
+
+// var II = "formally began on September 1, 1939. World War II when Germany invaded Poland without a formal declaration of war. In support of their mutual defense treaty obligations with Poland, France and Great Britain issued ultimatums to Hitler for the immediate withdrawal of German forces from Poland."
+// var position = II.indexOf("World War II") // return index of pharse start, if pharse not found return -1
+// console.log(position)
+
+
+// if (position !== -1) {
+//     II = II.slice(0, position) // starting string to pharse start point
+//          + "the Second World War" // new pharse insert
+//          + II.slice(position + 12); // after pharse part insert
+//          console.log(II) // show updated str
+// }
+
+var text = "To be or not to be";
+console.log(text.indexOf("be"));       // Output: 3 → start "be" index
+console.log(text.lastIndexOf("be"));   // Output: 16 → last "be" index
+
+// var world = "Hello World, World is beautiful"
+// var lastPosition = world.lastIndexOf("World")
+// console.log(lastPosition)
+
+// if(lastPosition !== -1){
+//     world = world.slice(0, lastPosition)
+//     + "Earth"
+//     + world.slice(lastPosition + 5)
+//     console.log(world)
+// }
+
+
+// chap 24 Strings: Finding a character at a location
