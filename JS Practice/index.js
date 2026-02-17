@@ -582,9 +582,9 @@
 //          console.log(II) // show updated str
 // }
 
-var text = "To be or not to be";
-console.log(text.indexOf("be"));       // Output: 3 → start "be" index
-console.log(text.lastIndexOf("be"));   // Output: 16 → last "be" index
+// var text = "To be or not to be";
+// console.log(text.indexOf("be"));       // Output: 3 → start "be" index
+// console.log(text.lastIndexOf("be"));   // Output: 16 → last "be" index
 
 // var world = "Hello World, World is beautiful"
 // var lastPosition = world.lastIndexOf("World")
@@ -598,4 +598,9 @@ console.log(text.lastIndexOf("be"));   // Output: 16 → last "be" index
 // }
 
 
+
+
 // chap 24 Strings: Finding a character at a location
+
+
+
