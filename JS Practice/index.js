@@ -604,3 +604,44 @@
 
 
 
+// var name = "Basit"
+// console.log(name)
+
+// // find first char using slice() method
+// var firstChar = name.slice(0,1)
+// console.log(firstChar)
+
+// // find similar but simple way using charAt() method
+// var charFirst = name.charAt(0)
+// console.log(charFirst)
+
+
+// // find last char using slice method
+// var lastChar = name.slice(name.length - 1, name.length)
+// console.log(lastChar)
+
+// // find similar but simple way using charAt() method
+// var charLast = name.charAt(name.length - 1)
+// console.log(charLast)
+
+// // Searching for any chars by using Loop + charAt(i)
+// var flag = false
+// for(var i = 0; i < name.length; i++){
+//     if(name.charAt(i) === 's'){
+//         console.log("s is found at index: " + i)
+//         flag = true
+//         break
+//     }
+// }
+
+// if(!flag){
+//     console.log("s is not found")
+// }
+
+
+
+// 25 Strings: Replacing characters
+
+var text = "Hello world, beautiful world!"
+
+for(var i )
