@@ -642,6 +642,13 @@
 
 // 25 Strings: Replacing characters
 
+
+// Loop + slice method: 
 var text = "Hello world, beautiful world!"
 
-for(var i )
+for(var i = 0; i < text.length; i++){
+    if(text.slice(i, i + 5) === "world"){
+        text = text.slice(0,i) + "Pakistan" + text.slice(i + 5)
+        console.log(text)
+    }
+}
