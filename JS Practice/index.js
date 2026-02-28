@@ -538,7 +538,6 @@
 // }
 // console.log(monthsAbbrev); // ["jan", "feb", "mar",.....]
 
-
 // method 1 (no else only if condition, )
 // var checkDoubleSpace = prompt("Enter some text:")
 
@@ -566,14 +565,11 @@
 //     alert("Double space not found!")
 // }
 
-
-
 // chap 23 Strings: Finding segments
 
 // var II = "formally began on September 1, 1939. World War II when Germany invaded Poland without a formal declaration of war. In support of their mutual defense treaty obligations with Poland, France and Great Britain issued ultimatums to Hitler for the immediate withdrawal of German forces from Poland."
 // var position = II.indexOf("World War II") // return index of pharse start, if pharse not found return -1
 // console.log(position)
-
 
 // if (position !== -1) {
 //     II = II.slice(0, position) // starting string to pharse start point
@@ -597,12 +593,7 @@
 //     console.log(world)
 // }
 
-
-
-
 // chap 24 Strings: Finding a character at a location
-
-
 
 // var name = "Basit"
 // console.log(name)
@@ -614,7 +605,6 @@
 // // find similar but simple way using charAt() method
 // var charFirst = name.charAt(0)
 // console.log(charFirst)
-
 
 // // find last char using slice method
 // var lastChar = name.slice(name.length - 1, name.length)
@@ -638,17 +628,52 @@
 //     console.log("s is not found")
 // }
 
+// chap 25 Strings: Replacing characters
 
+// Loop + slice, complex method:
+var text = "Hello world, beautiful world!";
+console.log(text);
 
-// 25 Strings: Replacing characters
-
-
-// Loop + slice method: 
-var text = "Hello world, beautiful world!"
-
-for(var i = 0; i < text.length; i++){
-    if(text.slice(i, i + 5) === "world"){
-        text = text.slice(0,i) + "Pakistan" + text.slice(i + 5)
-        console.log(text)
-    }
+for (var i = 0; i < text.length; i++) {
+  if (text.slice(i, i + 5) === "world") {
+    text =
+      text.slice(0, i) + // Start se i tak ka text rakho
+      "Pakistan" + // Beech me new text add karo
+      text.slice(i + 5); // Phir baqi text (i+5 se end tak) add karo
+    console.log(text);
+  }
 }
+
+// indexOf() + slice, better method:
+// if found → index number return
+// if not found → -1 return
+var text1 = "Hello Karachi, beautiful Karachi!";
+console.log(text1);
+var fChar = text1.indexOf("Karachi");
+
+if (fChar !== -1) {
+  text1 = text1.slice(0, fChar) + "Lahore" + text1.slice(fChar + 7);
+  console.log(text1);
+}
+
+// replace(), simple method: (recommended)
+// first wala replace
+var text2 = "Hello orangi, beautiful orangi!";
+console.log(text2);
+
+text2 = text2.replace("orangi", "korangi");
+console.log(text2);
+
+// Global Replace
+// /anyText/g is called: RegExp (Regular Expression),
+// / / = pattern define,
+// g = global,
+// i = case-insensitive (capital/small ignore karo)
+var text3 = "Hello Ghulshan, beautiful Ghulshan!";
+console.log(text3);
+var text3 = text3.replace(/ghulshan/gi, "Lyari");
+console.log(text3);
+
+
+
+// chap 26 Rounding numbers
